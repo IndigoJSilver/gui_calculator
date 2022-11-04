@@ -30,6 +30,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 ## Author
 
 * **Nam Ji Eun** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* https://studyingrabbit.tistory.com/23
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
@@ -42,4 +43,4 @@ This project is licensed under the Apache 2.0 License - see the [LICENSE.md](LIC
 * Hat tip to anyone whose code was used
 * Inspiration
 * etc
-* https://studyingrabbit.tistory.com/23
+
