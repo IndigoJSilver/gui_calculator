@@ -20,7 +20,7 @@ a branch with a descriptive name.
 A good branch name would be (where issue #325 is the ticket you're working on):
 
 ```sh
-git checkout -b 325-add-japanese-translations
+git checkout -b add-calculator-recovery
 ```
 
 ### Get the test suite running
@@ -129,9 +129,9 @@ git pull upstream master
 Then update your feature branch from your local copy of master, and push it!
 
 ```sh
-git checkout 325-add-japanese-translations
+git checkout add-calculator-recovery
 git rebase master
-git push --set-upstream origin 325-add-japanese-translations
+git push --set-upstream origin add-calculator-recovery
 ```
 
 Finally, go to GitHub and [make a Pull Request][] :D
@@ -152,9 +152,9 @@ To learn more about rebasing in Git, there are a lot of [good][git rebasing]
 [resources][interactive rebase] but here's the suggested workflow:
 
 ```sh
-git checkout 325-add-japanese-translations
+git checkout add-calculator-recovery
 git pull --rebase upstream master
-git push --force-with-lease 325-add-japanese-translations
+git push --force-with-lease add-calculator-recovery
 ```
 
 ### Merging a PR (maintainers only)
