@@ -1,4 +1,4 @@
-# Gui_Calculator
+# GUI CALCULATOR
 
 One Paragraph of project description goes here
 
