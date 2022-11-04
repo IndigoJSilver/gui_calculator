@@ -17,7 +17,7 @@ pip install pyqt5-tools
 
 ## Built With
 
-* [PyQt]([http://www.dropwizard.io/1.0.2/docs/](https://studyingrabbit.tistory.com/23)) - How to make calculator
+* [PyQt](http://www.dropwizard.io/1.0.2/docs/) - How to make calculator
 
 ## Contributing
 
