@@ -11,7 +11,8 @@ These instructions will get you a copy of the project up and running on your com
 What things you need to install the software and how to install them
 
 ```
-Give examples
+pip install pyqt5
+pip install pyqt5-tools
 ```
 
 ## Built With
