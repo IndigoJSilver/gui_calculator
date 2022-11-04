@@ -25,45 +25,43 @@ git checkout -b 325-add-calculator-recovery
 
 ### Get the test suite running
 
-Make sure you're using a recent ruby and have the `bundler` gem installed, at
-least version `1.14.3`.
+Make sure you're making calculator, install PyQt5 using pip
 
-You'll also need chrome installed in order to run cucumber scenarios.
+You'll also need python(3.4) installed in order to run scenarios.
 
 Now install the development dependencies:
 
 ```sh
-bundle install
+pip install pyqt5
 ```
 
-Then install javascript dependencies with [Yarn] (requires a current version of [Node.js]):
+Then install pyqt5-tools
 
 ```sh
-bin/yarn install
+pip install pyqt5-tools
 ```
 
-JS assets are located in `app/javascript/active_admin`. The config will take care of compiling a complete bundle with [Rollup] using the `build` script and exported to `app/assets/javascripts/active_admin/base.js` ready to be used by Sprockets.
+if you install successed, go to the python console, check that module installed normally.
 
-To update javascript bundle run (add `-w` flag for watch mode):
+if module installed normally
 
 ```sh
-bin/yarn build
+>>> import PyQt5
 ```
 
-Now you should be able to run the entire suite using:
+if module installed not normally
 
 ```sh
-bin/rake
-```
+>>> import PyQt5
+Traceback (most recent call last):
 
-The test run will generate a sample Rails application in `tmp/test_apps` to run the
-tests against.
+  File "<input>", line 1, in <module>
 
-If you want to test against a Rails version different from the latest, make sure
-you use the correct Gemfile, for example:
+  File "C:\Program Files\JetBrains\PyCharm Community Edition 2020.1\plugins\python-ce\helpers\pydev\_pydev_bundle\pydev_import_hook.py", line 21, in do_import
 
-```sh
-export BUNDLE_GEMFILE=gemfiles/rails_61/Gemfile
+    module = self._system_import(name, *args, **kwargs)
+
+ModuleNotFoundError: No module named 'PyQt5'
 ```
 
 **Warning** SCSS assets are aimed to be used indifferently with Sprockets **and** webpacker.
