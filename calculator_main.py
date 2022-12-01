@@ -29,7 +29,13 @@ class MainWindow(QDialog, form_main):
         self.btn_plusMinus.clicked.connect(self.plusMinus)
         self.btn_frac.clicked.connect(self.fraction)
         self.btn_sq.clicked.connect(self.square)                
-        self.btn_root.clicked.connect(self.root) 
+        self.btn_root.clicked.connect(self.root)
+        self.btn_rem.clicked.connect(self.remainder)
+        self.btn_multi.clicked.connect(self.multi)
+        self.btn_div.clicked.connect(self.divide)
+        self.btn_plus.clicked.connect(self.plus)
+        self.btn_ans.clicked.connect(self.equal)
+        self.btn_minus.clicked.connect(self.minus)
         
         
     def button_1(self):
@@ -102,6 +108,88 @@ class MainWindow(QDialog, form_main):
             pass
         else:
             self.lineEdit.setText(exist_text + ".")
+            
+    def remainder(self):
+        global math
+        math = "%"
+        global temp1
+        #temp1 = 0
+        exist_text = self.lineEdit.text()
+        if((exist_text[-1] == "+") | (exist_text[-1] == "-") | (exist_text[-1] == "*") | (exist_text[-1] == "/") | (exist_text[-1] == "%")):
+            self.lineEdit.setText(exist_text[:-1]) # 연산자 중복 방지   
+        temp1 = exist_text[:] # temp1에 처음 입력한 숫자 담기
+        self.lineEdit.setText("") # 연산자 입력 시 입력한 숫자 삭제
+            
+    def divide(self):
+        global math
+        math = "/"
+        global temp1
+        #temp1 = 0
+        exist_text = self.lineEdit.text()
+        if((exist_text[-1] == "+") | (exist_text[-1] == "-") | (exist_text[-1] == "*") | (exist_text[-1] == "/") | (exist_text[-1] == "%")):
+            self.lineEdit.setText(exist_text[:-1]) # 연산자 중복 방지   
+        temp1 = exist_text[:] # temp1에 처음 입력한 숫자 담기
+        self.lineEdit.setText("") # 연산자 입력 시 입력한 숫자 삭제
+
+    def minus(self):
+        global math
+        math = "-"
+        global temp1
+        #temp1 = 0
+        exist_text = self.lineEdit.text()
+        if((exist_text[-1] == "+") | (exist_text[-1] == "-") | (exist_text[-1] == "*") | (exist_text[-1] == "/") | (exist_text[-1] == "%")):
+            self.lineEdit.setText(exist_text[:-1]) # 연산자 중복 방지   
+        temp1 = exist_text[:] # temp1에 처음 입력한 숫자 담기
+        self.lineEdit.setText("") # 연산자 입력 시 입력한 숫자 삭제
+
+    def multi(self):
+        global math
+        math = "*"
+        global temp1
+        #temp1 = 0
+        exist_text = self.lineEdit.text()
+        if((exist_text[-1] == "+") | (exist_text[-1] == "-") | (exist_text[-1] == "*") | (exist_text[-1] == "/") | (exist_text[-1] == "%")):
+            self.lineEdit.setText(exist_text[:-1]) # 연산자 중복 방지   
+        temp1 = exist_text[:] # temp1에 처음 입력한 숫자 담기
+        self.lineEdit.setText("") # 연산자 입력 시 입력한 숫자 삭제
+
+    def plus(self):
+        global math
+        math = "+"
+        global temp1
+        #temp1 = 0
+        exist_text = self.lineEdit.text()
+        if((exist_text[-1] == "+") | (exist_text[-1] == "-") | (exist_text[-1] == "*") | (exist_text[-1] == "/") | (exist_text[-1] == "%")):
+            self.lineEdit.setText(exist_text[:-1]) # 연산자 중복 방지
+        temp1 = exist_text[:] # temp1에 처음 입력한 숫자 담기
+        self.lineEdit.setText("") # 연산자 입력 시 입력한 숫자 삭제
+                
+    def equal(self):   
+        exist_text = self.lineEdit.text()
+        global temp2
+        temp2 = exist_text[:]
+
+        if math == "+":
+            #global temp2
+            #temp2 = 0
+            ans = float(temp1) + float(temp2)
+            self.lineEdit.setText(str(ans))
+    
+        if math == "-":
+            ans = float(temp1) - float(temp2)
+            self.lineEdit.setText(str(ans))
+        
+        if math == "*":
+            ans = float(temp1) * float(temp2)
+            self.lineEdit.setText(str(ans))
+            
+        if math == "/":
+            ans = float(temp1) / float(temp2)
+            self.lineEdit.setText(str(ans))
+
+        if math == "%":
+            ans = float(temp1) % float(temp2)
+            self.lineEdit.setText(str(ans))
   
             
 if __name__ == "__main__":
