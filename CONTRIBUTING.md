@@ -1,7 +1,7 @@
 ## Contributing
 
-First off, thank you for considering contributing to Active Admin. It's people
-like you that make Active Admin such a great tool.
+First off, thank you for considering contributing to GUI_CALCULATOR. It's people
+like you that make GUI_CALCULATOR such a great tool.
 
 ### Where do I go from here?
 
@@ -14,13 +14,13 @@ Overflow], the issue tracker is only for bugs and feature requests.
 
 ### Fork & create a branch
 
-If this is something you think you can fix, then [fork Active Admin] and create
+If this is something you think you can fix, then [fork GUI_CALCULATOR] and create
 a branch with a descriptive name.
 
-A good branch name would be (where issue #325 is the ticket you're working on):
+A good branch name would be (where issue #10 is the ticket you're working on):
 
 ```sh
-git checkout -b 325-add-calculator-recovery
+git checkout -b 10-add-calculator-recovery
 ```
 
 ### Get the test suite running
@@ -72,40 +72,6 @@ As such, make sure not to use any sass-rails directives such as `asset-url` or `
 At this point, you're ready to make your changes! Feel free to ask for help;
 everyone is a beginner at first :smile_cat:
 
-### View your changes in a Rails application
-
-Active Admin is meant to be used by humans, not cucumbers. So make sure to take
-a look at your changes in a browser.
-
-To boot up a test Rails app:
-
-```sh
-bin/rake local server
-```
-
-This will automatically create a Rails app if none already exists, and store it
-in the `tmp/development_apps` folder.
-
-You should now be able to open <http://localhost:3000/admin> in your browser.
-You can log in using:
-
-*User*: admin@example.com
-*Password*: password
-
-If you need to perform any other commands on the test application, just pass
-them to the `local` rake task. For example, to boot the rails console:
-
-```sh
-bin/rake local console
-```
-
-Or to migrate the database, if you create a new migration or just play around
-with the db:
-
-```sh
-bin/rake local db:migrate
-```
-
 ### Get the style right
 
 Your patch should follow the same conventions & pass the same code quality
@@ -116,10 +82,9 @@ individually. Run `bin/rake -T lint` to see the available linters.
 ### Make a Pull Request
 
 At this point, you should switch back to your master branch and make sure it's
-up to date with Active Admin's master branch:
+up to date with master branch:
 
 ```sh
-git remote add upstream git@github.com:activeadmin/activeadmin.git
 git checkout master
 git pull upstream master
 ```
@@ -127,9 +92,9 @@ git pull upstream master
 Then update your feature branch from your local copy of master, and push it!
 
 ```sh
-git checkout 325-add-calculator-recovery
+git checkout 10-add-calculator-recovery
 git rebase master
-git push --set-upstream origin 325-add-calculator-recovery
+git push --set-upstream origin 10-add-calculator-recovery
 ```
 
 Finally, go to GitHub and [make a Pull Request][] :D
@@ -150,9 +115,9 @@ To learn more about rebasing in Git, there are a lot of [good][git rebasing]
 [resources][interactive rebase] but here's the suggested workflow:
 
 ```sh
-git checkout 325-add-calculator-recovery
+git checkout 10-add-calculator-recovery
 git pull --rebase upstream master
-git push --force-with-lease 325-add-calculator-recovery
+git push --force-with-lease 10-add-calculator-recovery
 ```
 
 ### Merging a PR (maintainers only)
@@ -167,27 +132,3 @@ A PR can only be merged into master by a maintainer if:
 
 Any maintainer is allowed to merge a PR if all of these conditions are
 met.
-
-### Shipping a release (maintainers only)
-
-Maintainers need to do the following to push out a release:
-
-* Switch to the master branch and make sure it's up to date.
-* Make sure you have [chandler] properly configured. Chandler is used to
-  automatically submit github release notes from the changelog right after
-  pushing the gem to rubygems.
-* Run one of `bin/rake release:prepare_{prerelease,prepatch,patch,preminor,minor,premajor,major}`, push the result and create a PR.
-* Review and merge the PR. The generated changelog in the PR should include all user visible changes you intend to ship.
-* Run `bin/rake release` from the target branch once the PR is merged.
-
-[chandler]: https://github.com/mattbrictson/chandler#2-configure-credentials
-[Stack Overflow]: http://stackoverflow.com/questions/tagged/activeadmin
-[new issue]: https://github.com/activeadmin/activeadmin/issues/new
-[fork Active Admin]: https://help.github.com/articles/fork-a-repo
-[make a pull request]: https://help.github.com/articles/creating-a-pull-request
-[git rebasing]: http://git-scm.com/book/en/Git-Branching-Rebasing
-[interactive rebase]: https://help.github.com/en/github/using-git/about-git-rebase
-[shortcut reference links]: https://github.github.com/gfm/#shortcut-reference-link
-[Rollup]: https://rollupjs.org/guide/en/#quick-start
-[Yarn]: https://yarnpkg.com/en/docs/install
-[Node.js]: https://nodejs.org/en/
