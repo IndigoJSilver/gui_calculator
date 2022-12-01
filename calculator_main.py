@@ -23,9 +23,14 @@ class MainWindow(QDialog, form_main):
         self.btn_9.clicked.connect(self.button_9)
         self.btn_0.clicked.connect(self.button_0)
         self.btn_del.clicked.connect(self.del_num)
-        self.btn_dot.clicked.connect(self.dot)
         self.btn_c.clicked.connect(self.clear)
-
+        self.btn_ce.clicked.connect(self.recentClr)
+        self.btn_dot.clicked.connect(self.dot)
+        self.btn_plusMinus.clicked.connect(self.plusMinus)
+        self.btn_frac.clicked.connect(self.fraction)
+        self.btn_sq.clicked.connect(self.square)                
+        self.btn_root.clicked.connect(self.root) 
+        
         
     def button_1(self):
         self.number("1")
@@ -70,6 +75,33 @@ class MainWindow(QDialog, form_main):
             
     def clear(self):
         self.lineEdit.setText("")
+        
+    def root(self):
+        exist_text = self.lineEdit.text()
+        ans = math.sqrt(float(exist_text))
+        self.lineEdit.setText(str(ans))
+
+    def square(self):
+        exist_text = self.lineEdit.text()
+        ans = float(exist_text) * float(exist_text)
+        self.lineEdit.setText(str(ans))
+
+    def fraction(self):
+        exist_text = self.lineEdit.text()
+        ans = 1 / float(exist_text)
+        self.lineEdit.setText(str(ans))
+        
+    def plusMinus(self):
+        exist_text = self.lineEdit.text()
+        ans = -1 * float(exist_text)
+        self.lineEdit.setText(str(ans))
+        
+    def dot(self):
+        exist_text = self.lineEdit.text()
+        if "." in self.lineEdit.text()[:]:
+            pass
+        else:
+            self.lineEdit.setText(exist_text + ".")
   
             
 if __name__ == "__main__":
