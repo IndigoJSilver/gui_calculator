@@ -23,8 +23,8 @@ class MainWindow(QDialog, form_main):
         self.btn_9.clicked.connect(self.button_9)
         self.btn_0.clicked.connect(self.button_0)
         self.btn_del.clicked.connect(self.del_num)
-        self.btn_dot.clicked.connect(self.dot)
         self.btn_c.clicked.connect(self.clear)
+        self.btn_ce.clicked.connect(self.recentClr)
 
         
     def button_1(self):
