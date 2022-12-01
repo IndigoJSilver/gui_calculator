@@ -1,5 +1,3 @@
-# 1. 버튼 입력
-
 import sys
 from PyQt5.QtWidgets import *
 from PyQt5 import uic
@@ -24,6 +22,9 @@ class MainWindow(QDialog, form_main):
         self.btn_8.clicked.connect(self.button_8)
         self.btn_9.clicked.connect(self.button_9)
         self.btn_0.clicked.connect(self.button_0)
+        self.btn_del.clicked.connect(self.del_num)
+        self.btn_dot.clicked.connect(self.dot)
+        self.btn_c.clicked.connect(self.clear)
 
         
     def button_1(self):
@@ -59,6 +60,16 @@ class MainWindow(QDialog, form_main):
     def number(self, num):
         exist_text = self.lineEdit.text()
         self.lineEdit.setText(exist_text + num)
+        
+    def del_num(self):
+        exist_text = self.lineEdit.text()
+        self.lineEdit.setText(exist_text[:-1])
+      
+    def recentClr(self):
+        self.lineEdit.setText("") 
+            
+    def clear(self):
+        self.lineEdit.setText("")
   
             
 if __name__ == "__main__":
