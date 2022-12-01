@@ -1,6 +1,6 @@
 # GUI CALCULATOR
 
-One Paragraph of project description goes here
+This program is Gui calculator made by python.
 
 ## Getting Started
 
@@ -17,22 +17,17 @@ pip install pyqt5-tools
 
 ## Built With
 
-* [PyQt](http://www.dropwizard.io/1.0.2/docs/) - How to make calculator
+* [PyQt5] - How to make calculator
+* [PyQt5 designer] - calculator UI
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+Please read [CONTRIBUTING.md](https://github.com/IndigoJSilver/gui_calculator/blob/main/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Author
 
-* **Nam Ji Eun** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-* https://studyingrabbit.tistory.com/23
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+* **Nam Ji Eun**
+* IndigoJSilver(https://github.com/IndigoJSilver)
 
 ## License
 
@@ -40,7 +35,6 @@ This project is licensed under the Apache 2.0 License - see the [LICENSE.md](LIC
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+* Thank you for seeing my project.
+* If you contact me, commit me anytime!
 
